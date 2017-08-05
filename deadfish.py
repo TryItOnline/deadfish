@@ -83,4 +83,7 @@ def deadfish_cli(accum=0):
         print
 
 if __name__ == "__main__":
-    deadfish_cli()
+    if len(sys.argv) == 1:
+        deadfish_cli()
+    else:
+        deadfish(open(sys.argv[1]).read())
